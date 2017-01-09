@@ -31,18 +31,13 @@
             // Not in Iframe
             alert("This canvas app must be included within an iframe");
         }
-       function test()
-        {
-               var username=Sfdc.canvas.byId("username"); 
-            alert(username);
-        }
+       
         
         Sfdc.canvas(function() {
             var sr = JSON.parse('<%=signedRequestJson%>');
             // Save the token
             Sfdc.canvas.oauth.token(sr.oauthToken);
-            var username=Sfdc.canvas.byId("username");
-            alert(username);
+            var name=sr.context.user.fullName;
             Sfdc.canvas.byId('username').innerHTML = sr.context.user.fullName;
         });
 
@@ -51,6 +46,6 @@
 <body>
     <br/>
     <h1>Hello <a id="username" href="https://nidhishekar-dev-ed--c.na34.visual.force.com/" onClick="alert(username);">User</a></h1>
-    <h1> test();</h1>
+    <h1>Hello <a id="username" href="https://nidhishekar-dev-ed--c.na34.visual.force.com/" onClick="alert(name);">User</a></h1>
 </body>
 </html>
