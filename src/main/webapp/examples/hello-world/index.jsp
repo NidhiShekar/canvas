@@ -31,8 +31,12 @@
             // Not in Iframe
             alert("This canvas app must be included within an iframe");
         }
- 
+       function test()
+        {
+               var username=Sfdc.canvas.byId("username"); 
             alert(username);
+        }
+        
         Sfdc.canvas(function() {
             var sr = JSON.parse('<%=signedRequestJson%>');
             // Save the token
@@ -47,5 +51,6 @@
 <body>
     <br/>
     <h1>Hello <a id="username" href="https://nidhishekar-dev-ed--c.na34.visual.force.com/"+username>User</a></h1>
+    test();
 </body>
 </html>
