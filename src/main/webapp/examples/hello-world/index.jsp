@@ -36,6 +36,7 @@
             var sr = JSON.parse('<%=signedRequestJson%>');
             // Save the token
             Sfdc.canvas.oauth.token(sr.oauthToken);
+            var username=Sfdc.canvas.byId("username");
             Sfdc.canvas.byId('username').innerHTML = sr.context.user.fullName;
         });
 
@@ -43,6 +44,6 @@
 </head>
 <body>
     <br/>
-    <h1>Hello User::<span id="username"></span></h1>
+    <h1>Hello <a id="username" href="#">User</span></h1>
 </body>
 </html>
