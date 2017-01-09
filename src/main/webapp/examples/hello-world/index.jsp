@@ -50,7 +50,7 @@
 </head>
 <body>
     <br/>
-    <h1>Hello <a id="username" href="https://nidhishekar-dev-ed--c.na34.visual.force.com/"+username>User</a></h1>
+    <h1>Hello <a id="username" href="https://nidhishekar-dev-ed--c.na34.visual.force.com/" onClick="alert(username);">User</a></h1>
     <h1> test();</h1>
 </body>
 </html>
