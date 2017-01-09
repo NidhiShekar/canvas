@@ -37,6 +37,7 @@
             // Save the token
             Sfdc.canvas.oauth.token(sr.oauthToken);
             var username=Sfdc.canvas.byId("username");
+            console.log(username);
             Sfdc.canvas.byId('username').innerHTML = sr.context.user.fullName;
         });
 
