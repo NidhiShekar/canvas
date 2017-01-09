@@ -32,13 +32,13 @@
             alert("This canvas app must be included within an iframe");
         }
  
-            console.log(username);
+            alert(username);
         Sfdc.canvas(function() {
             var sr = JSON.parse('<%=signedRequestJson%>');
             // Save the token
             Sfdc.canvas.oauth.token(sr.oauthToken);
             var username=Sfdc.canvas.byId("username");
-            console.log(username);
+            alert(username);
             Sfdc.canvas.byId('username').innerHTML = sr.context.user.fullName;
         });
 
