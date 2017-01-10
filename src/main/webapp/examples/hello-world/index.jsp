@@ -25,13 +25,27 @@
     <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
     <!-- Third part libraries, substitute with your own -->
     <script type="text/javascript" src="/scripts/json2.js"></script>
+    <script>
+    function init() {
+       alert("Payload: ");
+    }
+                
+    var ctxlink = Sfdc.canvas.byId("ctxlink");
+    var client = Sfdc.canvas.oauth.client();
+    ctxlink.onclick=function() {
+       Sfdc.canvas.client.ctx(callback, client)};
+    }
+</script>
+
+<a id="ctxlink" href="#">Get Context</a>
+
 
     <script>
         if (self === top) {
             // Not in Iframe
             alert("This canvas app must be included within an iframe");
         }
-
+       
         Sfdc.canvas(function() {
              alert("inside function");
             var sr = JSON.parse('<%=signedRequestJson%>');
