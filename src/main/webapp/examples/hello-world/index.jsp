@@ -33,9 +33,13 @@
         }
 
         Sfdc.canvas(function() {
+             alert("inside function");
             var sr = JSON.parse('<%=signedRequestJson%>');
+                                 alert(sr);
             // Save the token
             Sfdc.canvas.oauth.token(sr.oauthToken);
+            alert( Sfdc.canvas.oauth.token(sr.oauthToken));
+            alert( sr.context.user.fullName);
             Sfdc.canvas.byId('username').innerHTML = sr.context.user.fullName;
         });
 
