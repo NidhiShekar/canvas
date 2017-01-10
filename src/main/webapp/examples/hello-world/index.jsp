@@ -26,19 +26,6 @@
     <!-- Third part libraries, substitute with your own -->
     <script type="text/javascript" src="/scripts/json2.js"></script>
     <script>
-    function init() {
-       alert("Payload: ");
-    }
-                
-    var ctxlink = Sfdc.canvas.byId("ctxlink");
-        alert(ctxlink);
-    }
-</script>
-
-
-
-
-    <script>
         if (self === top) {
             // Not in Iframe
             alert("This canvas app must be included within an iframe");
