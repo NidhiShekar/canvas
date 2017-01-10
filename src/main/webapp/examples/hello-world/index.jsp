@@ -31,13 +31,11 @@
     }
                 
     var ctxlink = Sfdc.canvas.byId("ctxlink");
-    var client = Sfdc.canvas.oauth.client();
-    ctxlink.onclick=function() {
-       Sfdc.canvas.client.ctx(callback, client)};
+        alert(ctxlink);
     }
 </script>
 
-<a id="ctxlink" href="#">Get Context</a>
+
 
 
     <script>
