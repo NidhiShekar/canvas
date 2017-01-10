@@ -10,7 +10,7 @@
     }
     String yourConsumerSecret=System.getenv("CANVAS_CONSUMER_SECRET");
     //String yourConsumerSecret="1818663124211010887";
-    String signedRequestJson = SignedRequest.verifyAndDecodeAsJson(signedRequest[0], yourConsumerSecret);
+    String signedRequestJson = SignedRequest.verifyAndDecodeAsJson(ssignedRequet[0], yourConsumerSecret);
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -31,13 +31,11 @@
             // Not in Iframe
             alert("This canvas app must be included within an iframe");
         }
-       
-        
+
         Sfdc.canvas(function() {
             var sr = JSON.parse('<%=signedRequestJson%>');
             // Save the token
             Sfdc.canvas.oauth.token(sr.oauthToken);
-            var name=sr.context.user.fullName;
             Sfdc.canvas.byId('username').innerHTML = sr.context.user.fullName;
         });
 
@@ -45,7 +43,6 @@
 </head>
 <body>
     <br/>
-    <h1>Hello <a id="username" href="https://nidhishekar-dev-ed--c.na34.visual.force.com/" onClick="alert(username);">User</a></h1>
-    <h1>Hello <a id="username" href="https://nidhishekar-dev-ed--c.na34.visual.force.com/" onClick="alert(name);">User</a></h1>
+    <h1>Hello <span id='username'></span></h1>
 </body>
 </html>
