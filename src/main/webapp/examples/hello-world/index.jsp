@@ -31,7 +31,7 @@
             alert("This canvas app must be included within an iframe");
         }
   
-       Sfdc.canvas(function() {
+        Sfdc.canvas(function() {
            
             // Save the token
            Sfdc.canvas.oauth.token(window.signedRequestJson.oauthToken);
